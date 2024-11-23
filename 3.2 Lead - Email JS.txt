@@ -1,11 +1,11 @@
 function () {
-    var cookieEmail = {{[0] getCookie}}('LeadEmail');
+    var cookieEmail = {{[0].0 getCookie}}('LeadEmail');
 
     var email = document.querySelector("input[name*=email]")
   
     if (email && email.value.trim() !== ''){
       
-        {{[0] setCookie}}('LeadEmail', email.value, 365)
+        {{[0].1 setCookie}}('LeadEmail', email.value, 365)
         localStorage.email = email.value;
         return email.value;
       

@@ -1,5 +1,5 @@
 function () {
-    var cookieName = {{[0] getCookie}}('LeadFirstName');
+    var cookieName = {{[0].0 getCookie}}('LeadFirstName');
   
     var name = document.querySelector("input[name*=nome]")
   
@@ -7,7 +7,7 @@ function () {
       var firstname = name.value.trim().toLowerCase();
       firstname = firstname.split(' ')[0]
       
-      {{[0] setCookie}}('LeadFirstName', firstname, 365)
+      {{[0].1 setCookie}}('LeadFirstName', firstname, 365)
       localStorage.firstname = firstname
       
         return firstname;

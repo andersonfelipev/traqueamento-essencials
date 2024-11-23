@@ -1,5 +1,5 @@
 function () {
-    var cookiePhone = {{[0] getCookie}}('LeadPhone');
+    var cookiePhone = {{[0].0 getCookie}}('LeadPhone');
   
     var phone = document.querySelector("#phone");
 
@@ -7,7 +7,7 @@ function () {
     if (phone && phone.value.trim()){
         var phoneValue = phone.value.trim().toLowerCase().replace(/[\(\)\-\s]/g, '');  
          
-        {{[0] setCookie}}('LeadPhone', phoneValue, 365)
+        {{[0].1 setCookie}}('LeadPhone', phoneValue, 365)
         localStorage.phone = phoneValue;
       
         return "55" + phoneValue;
