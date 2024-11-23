@@ -1,0 +1,3 @@
+function(){
+  return function(t){for(var r=t+decodeURIComponent("="),n=document.cookie.split(";"),e=0;e<n.length;e++){for(var i=n[e];" "==i.charAt(0);)i=i.substring(1);if(0==i.indexOf(r))return i.substring(r.length,i.length)}return!1}
+}

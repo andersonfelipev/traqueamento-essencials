@@ -1,0 +1,20 @@
+function () {
+    var cookieLastName = {{[0] getCookie}}('LeadLastName');
+
+    var name = document.querySelector("input[name*=nome]")
+
+    if (name && name.value.trim() !== ''){
+        var fullname = name.value.trim().toLowerCase().split(' ');
+        var lastname = fullname[fullname.length - 1];
+        
+        {{[0] setCookie}}('LeadLastName', lastname, 365)
+        localStorage.lastname = lastname;
+        
+        return lastname;
+      
+    }else if(cookieLastName){
+        return cookieLastName;
+    }else {
+        return localStorage.lastname;  
+    }
+}

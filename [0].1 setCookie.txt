@@ -1,0 +1,3 @@
+function(){
+  return function(e,i,t){var o=new Date;o.setTime(o.getTime()+864e5*t);var n="expires"+decodeURIComponent("=")+o.toUTCString(),a="; domain"+decodeURIComponent("=")+window.location.hostname.split(".").slice(-3).join(".");document.cookie=e+decodeURIComponent("=")+i+"; "+n+"; path"+decodeURIComponent("=")+"/"+a}
+}
